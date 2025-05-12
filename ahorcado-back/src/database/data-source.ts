@@ -9,20 +9,41 @@ import { Word } from "../modules/words/word.entity";
 // Load environment variables from .env file
 dotenv.config();
 
-const loadInicialData = async () => {
+const loadInitialData = async () => {
   const wordRepository = AppDataSource.getRepository(Word);
 
-  const existingWords = await wordRepository.count();
-  if (existingWords > 0) {
-    console.log("🔹 Las palabras ya están cargadas en la base de datos.");
-    return;
-  }
   try {
-    const wordsData = JSON.parse(fs.readFileSync("words.json", "utf8"));
-    await wordRepository.save(wordsData);
-    console.log("Initial data loaded successfully");
+    // Leer datos desde el archivo JSON
+    const wordsData: { word: string }[] = JSON.parse(
+      fs.readFileSync("words.json", "utf8")
+    );
+
+    // Obtener datos actuales de la base de datos
+    const existingWords = await wordRepository.find();
+
+    // Convertir ambos en un formato ordenado para compararlos
+    const dbWordsSorted = existingWords.map((w) => w.word).sort();
+    const fileWordsSorted = wordsData
+      .map((w: { word: string }) => w.word)
+      .sort();
+
+    // Comparar si los datos son diferentes
+    if (JSON.stringify(dbWordsSorted) !== JSON.stringify(fileWordsSorted)) {
+      console.log("⚠ Los datos no coinciden, actualizando base de datos...");
+
+      // Vaciar la tabla antes de sobreescribir
+      await wordRepository.clear();
+
+      // Guardar nueva data desde el archivo JSON
+      await wordRepository.save(wordsData);
+      console.log("✅ Base de datos actualizada con éxito!");
+    } else {
+      console.log(
+        "🔹 Los datos ya están sincronizados, no se requiere actualización."
+      );
+    }
   } catch (error) {
-    console.error("Error loading initial data:", error);
+    console.error("❌ Error al cargar datos iniciales:", error);
   }
 };
 
@@ -39,7 +60,7 @@ const dataSourceOptions: DataSourceOptions = {
   database: process.env.DB_DATABASE || "spm_integral_db",
   // synchronize: true SHOULD NOT be used in production - otherwise you can lose production data.
   // Use migrations instead.
-  synchronize: true, // Explicitly set to false for migration generation and production
+  synchronize: false, // Explicitly set to false for migration generation and production
   logging:
     process.env.NODE_ENV === "development" ? ["query", "error"] : ["error"], // Log queries in dev
   entities: [
@@ -72,7 +93,7 @@ export const initializeDatabase = async () => {
     if (!AppDataSource.isInitialized) {
       await AppDataSource.initialize();
       console.log("Data Source has been initialized successfully.");
-      // await loadInicialData();
+      await loadInitialData();
     }
   } catch (err) {
     console.error("Error during Data Source initialization:", err);

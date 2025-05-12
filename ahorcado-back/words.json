@@ -1,0 +1,175 @@
+[
+  {
+    "word": "hemoglobina",
+    "clue": "proteina que transporta oxigeno en la sangre"
+  },
+  { "word": "colageno", "clue": "Proteina estructural presente en la piel" },
+  { "word": "insulina", "clue": "Hormona proteica que regula la glucosa" },
+  {
+    "word": "enzima",
+    "clue": "Catalizador biologíco"
+  },
+
+  {
+    "word": "aminoacido",
+    "clue": "unidad básica de las proteinas"
+  },
+
+  {
+    "word": "queratina",
+    "clue": "Presente en el cabello y las uñas"
+  },
+  { "word": "ribosoma", "clue": "Organelo donde se fabrican las proteinas" },
+  {
+    "word": "proteina",
+    "clue": "Molecula formada por aminoacidos con multiples funcones en el cuerpo"
+  },
+  {
+    "word": "traduccion",
+    "clue": "Proceso donde se construyen proteinas a partir de lARN mensajero"
+  },
+  {
+    "word": "metabolismo",
+    "clue": "conjunto de reacciones donde participan muchas enzimas (proteinas)"
+  },
+  {
+    "word": "citoesqueleto",
+    "clue": "Estructura proteica que mantiene la forma celular"
+  },
+  {
+    "word": "fibrinogeno",
+    "clue": "Proteina que participa en la coagulacion de la sangre "
+  },
+  {
+    "word": "sintesis-proteica",
+    "clue": "Proceso donde se fabrican proteinas a partir del ARN"
+  },
+  {
+    "word": "arn-mensajero",
+    "clue": "Molecula que lleva la informacion genetica al ribosoma para fabricar proteinas"
+  },
+  {
+    "word": "miosina",
+    "clue": "Proteína motora involucrada en la contracción muscular"
+  },
+  {
+    "word": "actina",
+    "clue": "Proteína estructural clave en el movimiento celular"
+  },
+  {
+    "word": "mioglobina",
+    "clue": "Proteína que almacena oxígeno en los músculos"
+  },
+  {
+    "word": "fibrina",
+    "clue": "Proteína que forma una red para detener el sangrado"
+  },
+  {
+    "word": "trombina",
+    "clue": "Enzima que convierte el fibrinógeno en fibrina para la coagulación"
+  },
+  {
+    "word": "histonas",
+    "clue": "Proteínas asociadas al ADN para la regulación de la expresión génica"
+  },
+  {
+    "word": "transferrina",
+    "clue": "Proteína que transporta hierro en la sangre"
+  },
+  {
+    "word": "caseína",
+    "clue": "Proteína de la leche con función estructural y nutricional"
+  },
+  {
+    "word": "elastina",
+    "clue": "Proteína que proporciona elasticidad a los tejidos"
+  },
+  {
+    "word": "anticuerpo",
+    "clue": "Proteína del sistema inmunológico que combate infecciones"
+  },
+  {
+    "word": "colipasa",
+    "clue": "Proteína que ayuda a la digestión de grasas junto con la lipasa"
+  },
+  {
+    "word": "sacarasa",
+    "clue": "Enzima que descompone la sacarosa en glucosa y fructosa"
+  },
+  {
+    "word": "amilasa",
+    "clue": "Enzima digestiva que descompone los carbohidratos"
+  },
+  {
+    "word": "lipoproteína",
+    "clue": "Complejo de proteínas y lípidos que transporta grasas en la sangre"
+  },
+  {
+    "word": "proteasa",
+    "clue": "Enzima que descompone proteínas en péptidos más pequeños"
+  },
+  {
+    "word": "citocromo",
+    "clue": "Proteína implicada en la cadena de transporte de electrones"
+  },
+  {
+    "word": "hemocianina",
+    "clue": "Proteína que transporta oxígeno en algunos invertebrados"
+  },
+  {
+    "word": "dopamina",
+    "clue": "Neurotransmisor derivado de aminoácidos como la tirosina"
+  },
+  {
+    "word": "glutatión",
+    "clue": "Molécula antioxidante que protege contra el estrés oxidativo"
+  },
+  {
+    "word": "pepsina",
+    "clue": "Enzima digestiva que descompone proteínas en el estómago"
+  },
+  {
+    "word": "quimotripsina",
+    "clue": "Enzima que participa en la digestión de proteínas en el intestino"
+  },
+  {
+    "word": "serotonina",
+    "clue": "Neurotransmisor derivado del triptófano, regulador del estado de ánimo"
+  },
+  {
+    "word": "arginina",
+    "clue": "Aminoácido precursor del óxido nítrico en la regulación vascular"
+  },
+  {
+    "word": "tirosina",
+    "clue": "Aminoácido involucrado en la producción de neurotransmisores"
+  },
+  {
+    "word": "fenilalanina",
+    "clue": "Aminoácido esencial necesario para la síntesis de proteínas"
+  },
+  {
+    "word": "lisina",
+    "clue": "Aminoácido esencial que contribuye a la reparación muscular"
+  },
+  {
+    "word": "cisteína",
+    "clue": "Aminoácido clave para la formación de enlaces disulfuro en proteínas"
+  },
+  {
+    "word": "leucina",
+    "clue": "Aminoácido involucrado en el crecimiento muscular"
+  },
+  {
+    "word": "catalasa",
+    "clue": "Enzima que descompone el peróxido de hidrógeno en agua y oxígeno"
+  },
+  {
+    "word": "peroxidasa",
+    "clue": "Enzima que elimina peróxidos tóxicos en la célula"
+  },
+  {
+    "word": "oxitocina",
+    "clue": "Hormona peptídica que regula el apego y las contracciones uterinas"
+  }
+]

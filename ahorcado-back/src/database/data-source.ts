@@ -39,7 +39,7 @@ const dataSourceOptions: DataSourceOptions = {
   database: process.env.DB_DATABASE || "spm_integral_db",
   // synchronize: true SHOULD NOT be used in production - otherwise you can lose production data.
   // Use migrations instead.
-  synchronize: false, // Explicitly set to false for migration generation and production
+  synchronize: true, // Explicitly set to false for migration generation and production
   logging:
     process.env.NODE_ENV === "development" ? ["query", "error"] : ["error"], // Log queries in dev
   entities: [

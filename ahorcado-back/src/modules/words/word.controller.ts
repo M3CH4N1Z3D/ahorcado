@@ -16,6 +16,17 @@ export class WordController {
       console.error("Error fetching Word:", error); // Correct log message
     }
   }
+
+  async getAllWords(req: Request, res: Response): Promise<void> {
+    try {
+      const words = await wordService.getAllWords();
+      res
+        .status(200)
+        .json({ message: "Words fetched successfully", data: { words } });
+    } catch (error) {
+      console.error("Error fetching words:", error);
+    }
+  }
 }
 
 export const wordController = new WordController();

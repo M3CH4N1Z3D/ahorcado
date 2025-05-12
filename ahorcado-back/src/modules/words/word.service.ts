@@ -13,6 +13,12 @@ export class WordService {
 
     return word;
   }
+
+  async getAllWords(): Promise<Word[]> {
+    const words = await this.wordRepository.find();
+
+    return words;
+  }
 }
 
 export const wordService = new WordService();

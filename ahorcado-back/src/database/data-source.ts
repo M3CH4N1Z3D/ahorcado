@@ -52,11 +52,11 @@ const dataSourceOptions: DataSourceOptions = {
   url:
     // process.env.DATABASE_URL_INTERNAL ||
     process.env.DATABASE_URL_EXTERNAL || "",
-  host: process.env.DB_HOST || "localhost",
-  port: parseInt(process.env.DB_PORT || "5432", 10),
-  username: process.env.DB_USERNAME || "postgres",
-  password: process.env.DB_PASSWORD || "password",
-  database: process.env.DB_DATABASE || "spm_integral_db",
+  // host: process.env.DB_HOST || "localhost",
+  // port: parseInt(process.env.DB_PORT || "5432", 10),
+  // username: process.env.DB_USERNAME || "postgres",
+  // password: process.env.DB_PASSWORD || "password",
+  // database: process.env.DB_DATABASE || "spm_integral_db",
   // synchronize: true SHOULD NOT be used in production - otherwise you can lose production data.
   // Use migrations instead.
   synchronize: false, // Explicitly set to false for migration generation and production

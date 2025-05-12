@@ -28,6 +28,10 @@ const loadInicialData = async () => {
 
 const dataSourceOptions: DataSourceOptions = {
   type: "postgres",
+  url:
+    process.env.DATABASE_URL_INTERNAL ||
+    // process.env.DATABASE_URL_EXTERNAL ||
+    "",
   host: process.env.DB_HOST || "localhost",
   port: parseInt(process.env.DB_PORT || "5432", 10),
   username: process.env.DB_USERNAME || "postgres",
@@ -45,6 +49,9 @@ const dataSourceOptions: DataSourceOptions = {
     // Include both .ts and .js for flexibility during development and compiled state
     // path.join(__dirname, "..", "modules", "**", "entities", "*.entity.{ts,js}"),
   ],
+  ssl: {
+    rejectUnauthorized: false, // Render requiere esto si SSL está activado
+  },
   migrations: [
     // Path relative to src/database/data-source.ts
     path.join(__dirname, "migrations", "*.{ts,js}"),

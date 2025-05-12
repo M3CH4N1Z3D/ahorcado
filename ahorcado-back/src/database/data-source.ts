@@ -72,7 +72,7 @@ export const initializeDatabase = async () => {
     if (!AppDataSource.isInitialized) {
       await AppDataSource.initialize();
       console.log("Data Source has been initialized successfully.");
-      await loadInicialData();
+      // await loadInicialData();
     }
   } catch (err) {
     console.error("Error during Data Source initialization:", err);

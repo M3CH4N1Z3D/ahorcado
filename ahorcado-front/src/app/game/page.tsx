@@ -13,8 +13,8 @@ export default function Game() {
     clue: string;
   }>({ id: "", word: "", clue: "" });
   const [hiddenWord, setHiddenWord] = useState("");
-  const [score, setScore] = useState(600);
-  const [attempts, setAttempts] = useState(6);
+  const [score, setScore] = useState(700);
+  const [attempts, setAttempts] = useState(7);
   const [usedLetters, setUsedLetters] = useState<string[]>([]);
   const [playersData, setPlayersData] = useState<Player[]>([]);
   const [showScores, setShowScores] = useState(false);

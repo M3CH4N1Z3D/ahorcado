@@ -20,8 +20,6 @@ export default function Game() {
   const [showScores, setShowScores] = useState(false);
   const [playerStored, setPlayerStored] = useState<string | null>(null);
 
-  // const [timeLeft, setTimeLeft] = useState(30);
-
   const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ-".split("");
   const router = useRouter();
   const apiUrl = process.env.NEXT_PUBLIC_API_URL;
@@ -42,10 +40,9 @@ export default function Game() {
         if (res.data && res.data.data && res.data.data.players) {
           const parsedPlayers = res.data.data.players.sort(
             (a: { score: number }, b: { score: number }) => b.score - a.score
-          ); // Eliminamos JSON.parse()
+          );
 
-          setPlayersData(parsedPlayers); // Corregimos el nombre de la variable
-        } else {
+          setPlayersData(parsedPlayers);
           console.error(
             "La respuesta de la API no contiene datos esperados:",
             res.data
@@ -159,6 +156,9 @@ export default function Game() {
       // Verificar si el jugador ha ganado DESPUÉS de actualizar la palabra
       if (!newHiddenWord.includes("_")) {
         setTimeout(() => {
+          const victorySound = new Audio("/success.mp3"); // Ruta del sonido
+          victorySound.play(); // Reproduce el sonido
+
           Swal.fire({
             title: `!!! FELICITACIONES ${playerInfo.name.toUpperCase()}¡¡¡`,
             text: `Encontraste la plabra secreta. Tu puntaje es: ${score} puntos`,

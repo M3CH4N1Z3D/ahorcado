@@ -35,6 +35,17 @@ export class PlayerController {
       console.error("Error fetching Players:", error); // Correct log message
     }
   }
+
+  async deletePlayers(req: Request, res: Response): Promise<void> {
+    try {
+      const players = await playerService.deletePlayers();
+      res
+        .status(200)
+        .json({ message: "Players deleted successfully", data: { players } });
+    } catch (error) {
+      console.error("Error deleting Players:", error);
+    }
+  }
 }
 
 export const playerController = new PlayerController();

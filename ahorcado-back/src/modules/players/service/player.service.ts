@@ -19,6 +19,10 @@ export class PlayerService {
   async getPlayers(): Promise<Player[]> {
     return this.playerRepository.find();
   }
+
+  async deletePlayers(): Promise<void> {
+    return this.playerRepository.clear();
+  }
 }
 
 export const playerService = new PlayerService();

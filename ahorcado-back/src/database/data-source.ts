@@ -47,6 +47,17 @@ const loadInitialData = async () => {
   }
 };
 
+const resetPlayers = async () => {
+  const playerRepository = AppDataSource.getRepository(Player);
+
+  try {
+    await playerRepository.clear();
+    console.log("✅ Jugadores reiniciados con éxito!");
+  } catch (error) {
+    console.error("❌ Error al reiniciar jugadores:", error);
+  }
+};
+
 const dataSourceOptions: DataSourceOptions = {
   type: "postgres",
   url:
@@ -93,6 +104,7 @@ export const initializeDatabase = async () => {
       await AppDataSource.initialize();
       console.log("Data Source has been initialized successfully.");
       await loadInitialData();
+      await resetPlayers();
     }
   } catch (err) {
     console.error("Error during Data Source initialization:", err);

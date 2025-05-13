@@ -61,8 +61,9 @@ const resetPlayers = async () => {
 const dataSourceOptions: DataSourceOptions = {
   type: "postgres",
   url:
-    // process.env.DATABASE_URL_INTERNAL ||
-    process.env.DATABASE_URL_EXTERNAL || "",
+    process.env.DATABASE_URL_INTERNAL ||
+    // process.env.DATABASE_URL_EXTERNAL ||
+    "",
   // host: process.env.DB_HOST || "localhost",
   // port: parseInt(process.env.DB_PORT || "5432", 10),
   // username: process.env.DB_USERNAME || "postgres",
